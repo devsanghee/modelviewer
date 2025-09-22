@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; a9ultra</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; a9ultra">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer
+      src="dining_cup.glb"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      poster="a9ultra-poster.webp"
+      camera-controls
+      tone-mapping="neutral"
+      exposure="1"
+      shadow-intensity="1"
+      camera-orbit="0deg 90deg"
+      field-of-view="30deg">
+      
+      <button slot="ar-button" id="ar-button">
+        View in your space
+      </button>
+    
+    </model-viewer>
+  </body>
+</html>
