@@ -19,6 +19,20 @@ model-viewer {
   background-color: #ffffff;
 }
 
+
+.left {
+    float:left; 
+    width:200px; 
+    height:100px; 
+    background-color:#234234;}
+    
+.right {
+    display:inline-block; 
+    width:200px; 
+    height:100px; 
+    background-color:#666666; 
+    margin-left:10px;}  
+
 #ar-button {
   background-image: url(ar_icon.png);
   background-repeat: no-repeat;
