@@ -11,12 +11,11 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  align-content: center;
 }
 
 model-viewer {
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 85%;
   background-color: #ffffff;
 }
 
