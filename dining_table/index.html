@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt;">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <link type="text/css" href="../styles.css" rel="stylesheet"/>
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </head>
@@ -16,18 +16,15 @@
       src="dining_table.glb"
       ar
       ar-modes="webxr scene-viewer quick-look"
-      poster="a9ultra-poster.webp"
       camera-controls
       tone-mapping="neutral"
       exposure="1"
       shadow-intensity="1"
       camera-orbit="0deg 90deg"
-      field-of-view="15deg">
-      
-      <button slot="ar-button" id="ar-button">
-        View in your space
-      </button>
-    
+      field-of-view="8deg">
     </model-viewer>
+    <button slot="ar-button" id="ar-button">
+      View in your space
+    </button>
   </body>
 </html>

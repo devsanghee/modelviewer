@@ -1,27 +1,132 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <title>&lt;model-viewer&gt; oled m4</title>
-    <meta charset="utf-8">
-    <meta name="description" content="&lt;model-viewer&gt; oled m4">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" href="./styles.css" rel="stylesheet"/>
-  </head>
-  <body>
-    <!-- <model-viewer> HTML element -->
-    <model-viewer src="oled_m4_scaled_detail_s1500_1024_png_rI_scaled_dracoL.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="oled-m4-poster.webp" shadow-intensity="1" environment-image="marry_hall_1k.hdr" camera-orbit="0deg 90deg 4.327m" field-of-view="30deg">
-      <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
-      </div>
-      <button slot="ar-button" id="ar-button">
-          View in your space
-      </button>
-      <div id="ar-prompt">
-          <img src="ar_hand_prompt.png">
-      </div>
-    </model-viewer>  
-    <script src="script.js"></script>
-    <!-- Loads <model-viewer> for browsers: -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Image to 3D</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background-color: #ffffff;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
+    .card a {
+      display: inline-block;
+      padding: 8px 14px;
+      background-color: hsl(0, 0%, 100%);
+      color: rgb(0, 0, 0);
+      border-radius: 20px;
+      text-decoration: none;
+
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <h1>Image to 3D</h1>
+  <div class="grid">
+    <div class="card">
+      <img src="refrigerators_t873mte111/t873mte111.PNG" alt="fridge_t873mte111">
+      <a href="refrigerators_t873mte111/index.html">Refrigerators</a>
+    </div>
+    <div class="card">
+      <img src="refrigerators_z330meef11/z330meef11.PNG" alt="fridge_z330meef11">
+      <a href="refrigerators_z330meef11/index.html">Kimchi Refrigerators</a>
+    </div>
+    <div class="card">
+      <img src="stanbyme_27lx6tpga/27lx6tpga.PNG" alt="stanbyme_27lx6tpga">
+      <a href="stanbyme_27lx6tpga/index.html">StanbyMe</a>
+    </div>
+    <div class="card">
+      <img src="airpurifier_fs065psjc/fs065psjc.jpg" alt="airpurifier_fs065psjc">
+      <a href="airpurifier_fs065psjc/index.html">Airpurifier</a>
+    </div>
+    <div class="card">
+      <img src="dehumidifiers_dq154mwgaws/dq154mwgaws.PNG" alt="dehumidifiers_dq154mwgaws">
+      <a href="dehumidifiers_dq154mwgaws/index.html">Dehumidifiers</a>
+    </div>
+    <div class="card">
+      <img src="dining_chair/dining_chair.jpg" alt="dining_chair">
+      <a href="dining_chair/index.html">Dining Chair</a>
+    </div>
+    <div class="card">
+      <img src="dining_cup/dining_cup.jpg" alt="dining_cup">
+      <a href="dining_cup/index.html">Dining Cup</a>
+    </div>
+    <div class="card">
+      <img src="dining_pot/dining_pot.jpg" alt="dining_pot">
+      <a href="dining_pot/index.html">Electric Kettle</a>
+    </div>
+    <div class="card">
+      <img src="dining_table/dining_table.jpg" alt="dining_table">
+      <a href="dining_table/index.html">Dining Table</a>
+    </div>
+    <div class="card">
+      <img src="etc_pot/etc_pot.jpg" alt="etc_pot">
+      <a href="etc_pot/index.html">Dining Pot</a>
+    </div>
+    <div class="card">
+      <img src="etc_sofa/etc_sofa.jpg" alt="etc_sofa">
+      <a href="etc_sofa/index.html">Living Sofa</a>
+    </div>
+    <div class="card">
+      <img src="etc_table/etc_table.jpg" alt="etc_table">
+      <a href="etc_table/index.html">Dressing Table</a>
+    </div>
+    <div class="card">
+      <img src="etc_trolley/etc_trolley.jpg" alt="etc_trolley">
+      <a href="etc_trolley/index.html">Trolley</a>
+    </div>
+    <div class="card">
+      <img src="living_chair/living_chair.jpg" alt="living_chair">
+      <a href="living_chair/index.html">Living Chair</a>
+    </div>
+    <div class="card">
+      <img src="living_sofa/living_sofa.jpg" alt="living_sofa">
+      <a href="living_sofa/index.html">Living Sofa</a>
+    </div>
+    <div class="card">
+      <img src="office_light/office_light.jpg" alt="office_light">
+      <a href="office_light/index.html">Office Light</a>
+    </div>
+    <div class="card">
+      <img src="office_shelf/office_shelf.jpg" alt="office_shelf">
+      <a href="office_shelf/index.html">Office Shelf</a>
+    </div>
+    <div class="card">
+      <img src="office_stool/office_stool.jpg" alt="office_stool">
+      <a href="office_stool/index.html">Office Stool</a>
+    </div>
+  </div>
+</body>
 </html>
